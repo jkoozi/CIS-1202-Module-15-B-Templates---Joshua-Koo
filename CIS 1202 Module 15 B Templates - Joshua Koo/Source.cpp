@@ -12,6 +12,11 @@ T half(T value) {
 	return value / static_cast<T>(2);
 }
 
+//Specialized template for integer types
+template <>
+int half<int>(int value) {
+	return (value + 1) / 2;
+}
 
 int main() {
 	//Testing the half function for different data types
@@ -20,7 +25,13 @@ int main() {
 	double doubleValue = 20.8;
 	cout << "Half of " << doubleValue << " is " << half(doubleValue) << endl;
 
-	// Floating-point
+	//Floating-point
 	float floatValue = 10.5f;
 	cout << "Half of " << floatValue << " is " << half(floatValue) << endl;
+
+	//Integer
+	int intValue = 9;
+	cout << "Half of " << intValue << " is " << half<int>(intValue) << endl;
+
+	return 0;
 }
