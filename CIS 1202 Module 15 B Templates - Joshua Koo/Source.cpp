@@ -18,5 +18,9 @@ int main() {
 
 	//Double 
 	double doubleValue = 20.8;
-	cout << half(doubleValue) << endl;
+	cout << "Half of " << doubleValue << " is " << half(doubleValue) << endl;
+
+	// Floating-point
+	float floatValue = 10.5f;
+	cout << "Half of " << floatValue << " is " << half(floatValue) << endl;
 }
